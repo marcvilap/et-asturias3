@@ -1,0 +1,45 @@
+@font-face {
+	font-family: 'Albert Sans';
+	font-style: normal;
+	font-weight: 100 900;
+	font-display: 'swap';
+	src: url(/albert-sans-100-900.woff2) format('woff2-variations');
+}
+
+@import 'tailwindcss';
+
+@theme {
+	--default-transition-duration: 0.3s;
+	--font-sans: 'Albert Sans', sans-serif;
+	--breakpoint-sm: 28rem;
+	--breakpoint-md: 48rem;
+	--breakpoint-lg: 64rem;
+	--breakpoint-xl: 80rem;
+	--breakpoint-2xl: initial;
+}
+
+@layer base {
+	html {
+		@apply max-[400px]:text-[4vw] min-[1281px]:text-[1.25vw] min-[1920px]:text-[24px];
+	}
+}
+
+@layer components {
+	.bg-railway {
+		background-image: url(./assets/icons/railway.svg);
+	}
+	[class*='reveal:'] {
+		@apply group-revealed:transition group-revealed:duration-1000 revealed:transition revealed:duration-1000 will-change-[transform,opacity];
+	}
+}
+
+@utility container {
+	@apply mx-auto px-8 xl:px-24;
+}
+
+@custom-variant reveal (&.reveal);
+@custom-variant revealed (&.revealed);
+
+@view-transition {
+	navigation: auto;
+}

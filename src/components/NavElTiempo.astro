@@ -1,0 +1,10 @@
+---
+import SvgBack from '$assets/icons/back.svg'
+import SvgElTiempo from '$assets/icons/eltiempo.svg'
+---
+
+<nav class="absolute inset-x-0 top-0 z-20 flex h-12 items-center justify-between bg-white/90 px-6 shadow backdrop-blur lg:px-12">
+	<button class="w-3 cursor-pointer text-black" onclick="history.back()" aria-label="Back"><SvgBack /></button>
+	<a class="w-24" target="_blank" rel="noreferrer" href="https://eltiempo.es" aria-label="ElTiempo"><SvgElTiempo class="text-[#04aeef]" /></a>
+	<span class="w-3"></span>
+</nav>

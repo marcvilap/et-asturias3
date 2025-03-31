@@ -1,0 +1,21 @@
+---
+import { Image } from 'astro:assets'
+
+interface Props {
+	image: ImageMetadata
+}
+
+const { image } = Astro.props
+---
+
+<div class="lg:flex">
+	<div class="lg:basis-2/5">
+		<Image class="sticky top-0 w-full object-cover lg:h-screen" src={image} width={1080} densities={[2]} quality={90} alt="" />
+	</div>
+	<div class="lg:basis-3/5">
+		<!-- <div class="lg:min-h-screen"></div> -->
+		<div class="flex items-center justify-center py-24 pr-12 pl-6 lg:min-h-screen lg:pr-6 lg:pl-12">
+			<div class="grid w-full max-w-lg gap-8 text-pretty text-stone-600"><slot /></div>
+		</div>
+	</div>
+</div>

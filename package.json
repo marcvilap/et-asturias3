@@ -1,0 +1,35 @@
+{
+	"name": "eltiempo",
+	"type": "module",
+	"version": "1.0.0",
+	"scripts": {
+		"dev": "astro dev",
+		"check": "astro check",
+		"build": "astro build",
+		"preview": "astro preview",
+		"format": "prettier --write .",
+		"clean": "rm -rf .astro dist node_modules bun.lock"
+	},
+	"dependencies": {
+		"@tailwindcss/vite": "^4.0.14",
+		"astro": "^5.5.2",
+		"tailwindcss": "^4.0.14"
+	},
+	"devDependencies": {
+		"@astrojs/check": "^0.9.4",
+		"prettier": "^3.5.3",
+		"prettier-plugin-astro": "^0.14.1",
+		"prettier-plugin-tailwindcss": "^0.6.11"
+	},
+	"prettier": {
+		"arrowParens": "avoid",
+		"printWidth": 999,
+		"semi": false,
+		"singleQuote": true,
+		"useTabs": true,
+		"plugins": [
+			"prettier-plugin-astro",
+			"prettier-plugin-tailwindcss"
+		]
+	}
+}

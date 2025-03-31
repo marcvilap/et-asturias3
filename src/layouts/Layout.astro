@@ -1,0 +1,35 @@
+---
+import '../main.css'
+import NavElTiempo from '$components/NavElTiempo.astro'
+
+const metaTitle = 'Asturias en primavera: un viaje inolvidable al Paraíso Natural'
+const metaDescription = 'Los días se alargan, el aire se llena del aroma dulce de los manzanos en flor y la naturaleza despierta en Asturias con un espectáculo de colores y sensaciones.'
+---
+
+<!doctype html>
+<html lang="es-ES">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="robots" content="noindex,nofollow" />
+		<title>{metaTitle}</title>
+		<meta property="description" content={metaDescription} />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="/" />
+		<meta property="og:image" content="/thumbnail.jpg" />
+		<meta property="og:title" content={metaTitle} />
+		<meta property="og:description" content={metaDescription} />
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:image" content="/thumbnail.jpg" />
+		<meta property="twitter:title" content={metaTitle} />
+		<meta property="twitter:description" content={metaDescription} />
+		<link rel="icon" href="/favicon.png" />
+	</head>
+	<body>
+		<NavElTiempo />
+		<div class="overflow-clip">
+			<slot />
+		</div>
+		<script src="../main.ts"></script>
+	</body>
+</html>
